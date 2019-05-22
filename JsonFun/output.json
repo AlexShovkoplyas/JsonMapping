@@ -1,0 +1,9 @@
+{
+  "name": "Alex", //change property name
+  "personId": 1, //change data type
+  "relatedPeople": { //change nesting level
+    "children": [
+      "Alex1", "Alex2" //make projection
+    ]
+  }
+}

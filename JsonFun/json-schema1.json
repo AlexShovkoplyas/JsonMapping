@@ -1,0 +1,59 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "name",
+    "personId",
+    "relatedPeople"
+  ],
+  "properties": {
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The Name Schema",
+      "default": "",
+      "examples": [
+        "Alex"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "personId": {
+      "$id": "#/properties/personId",
+      "type": "integer",
+      "title": "The Personid Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "relatedPeople": {
+      "$id": "#/properties/relatedPeople",
+      "type": "object",
+      "title": "The Relatedpeople Schema",
+      "required": [
+        "children"
+      ],
+      "properties": {
+        "children": {
+          "$id": "#/properties/relatedPeople/properties/children",
+          "type": "array",
+          "title": "The Children Schema",
+          "items": {
+            "$id": "#/properties/relatedPeople/properties/children/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "Alex1",
+              "Alex2"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  }
+}

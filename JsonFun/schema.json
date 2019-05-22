@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "default": "",
+      "transform": "personName"
+    },
+    "personId": {
+      "type": "number",
+      "default": "",
+      "transform": "personId"
+    },
+    "relatedPeople": {
+      "type": "object",
+      "properties": {
+        "children": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "default": "",
+            "transform": "children[*].firstName"
+          }
+        }
+      }
+    }
+  }
+}
